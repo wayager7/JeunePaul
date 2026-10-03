@@ -5,7 +5,7 @@
 body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: 90vh;
     overflow: hidden;
     background-color: #000;
 }
@@ -23,7 +23,7 @@ body {
 .page-content {
     position: relative;
     z-index: 1;
-    min-height: 100vh;
+    min-height: 90vh;
     min-width: 100vw;
     display: flex;
     justify-content: space-evenly;
