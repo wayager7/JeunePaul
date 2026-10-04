@@ -70,3 +70,13 @@ svg {
 #soundcloud:hover {
     fill: #FF5500;
 } */
+
+@media (max-width: 500px) {
+    .page-content {
+        justify-content:space-between;
+        /* justify-content:space-around; */
+    }
+    .logo, .links {
+        margin: 30px
+    }
+}
