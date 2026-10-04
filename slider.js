@@ -1,6 +1,7 @@
 let face1 = document.getElementById("face1");
 let face2 = document.getElementById("face2");
 let face3 = document.getElementById("face3");
+let nclick = 0;
 
 function changeFace() {
     let roue = Math.floor(Math.random() * 3);
@@ -25,8 +26,20 @@ function change2Face() {
         }, i * 200);
     }
 }
+function change3Face() {
+    face1.style.display = nclick === 0 ? "block" : "none";
+    face2.style.display = nclick === 1 ? "block" : "none";
+    face3.style.display = nclick === 2 ? "block" : "none";
+}
 
 // document.body.addEventListener("click", changeFace);
 // changeFace();
 // document.body.addEventListener("click", change2Face);
-change2Face();
+// change2Face();
+onclick = () => {
+    nclick++;
+    if (nclick > 2) {
+        nclick = 0;
+    }
+    change3Face();
+}

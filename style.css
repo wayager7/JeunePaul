@@ -31,8 +31,17 @@ body {
     flex-direction: column;
 }
 
+.logo {
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 .face {
     position: relative;
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 #face1, #face2, #face3 {
     position: absolute;
