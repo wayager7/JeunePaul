@@ -8,6 +8,25 @@ function changeFace() {
     face2.style.zIndex = roue === 1 ? "1" : "0";
     face3.style.zIndex = roue === 2 ? "1" : "0";
 }
+function change2Face() {
+    face1.style.display = "block";
+    face2.style.display = "none";
+    face3.style.display = "none";
+    for (let i = 0; i < 3; i++) {
+        setTimeout(() => {
+            face1.style.display = i === 0 ? "block" : "none";
+            face2.style.display = i === 1 ? "block" : "none";
+            face3.style.display = i === 2 ? "block" : "none";
+            if (i === 2) {
+                setTimeout(() => {
+                    change2Face();
+                }, 200);
+            }
+        }, i * 200);
+    }
+}
 
-document.body.addEventListener("click", changeFace);
-changeFace();
+// document.body.addEventListener("click", changeFace);
+// changeFace();
+// document.body.addEventListener("click", change2Face);
+change2Face();
