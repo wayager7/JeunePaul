@@ -26,4 +26,12 @@ function changeBackground() {
     }
 }
 
-changeBackground();
+async function initializeBackground() {
+    const images = Array.from(document.images);
+    await Promise.allSettled(images.map(image => image.decode()));
+
+    changeBackground();
+    document.body.classList.add("images-loaded");
+}
+
+initializeBackground();

@@ -18,6 +18,7 @@ body {
     height: 100%;
     object-fit: cover;
     opacity: 0.5;
+    visibility: hidden;
 }
 
 .background-video img {
@@ -37,6 +38,12 @@ body {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+    visibility: hidden;
+}
+
+body.images-loaded .background-video,
+body.images-loaded .page-content {
+    visibility: visible;
 }
 
 .logo {
