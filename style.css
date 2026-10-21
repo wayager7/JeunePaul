@@ -19,6 +19,8 @@ body {
     object-fit: cover;
     opacity: 0.5;
     visibility: hidden;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .background-video img {
